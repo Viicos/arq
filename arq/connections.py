@@ -50,7 +50,7 @@ class RedisSettings:
     sentinel_master: str = 'mymaster'
 
     retry_on_timeout: bool = False
-    retry_on_error: Optional[list[Exception]] = None
+    retry_on_error: Optional[list[type[Exception]]] = None
     retry: Optional[Retry] = None
 
     @classmethod
